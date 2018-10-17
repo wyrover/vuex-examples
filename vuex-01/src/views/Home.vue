@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <button @click="increment">增加</button>
     <h1>{{count}}</h1>
   </div>
 </template>
@@ -16,6 +17,9 @@ export default {
   },
   computed: {
     ...mapGetters(['count'])
+  },
+  methods: {
+    ...mapActions(['increment'])
   }
 
 }

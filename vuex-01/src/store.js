@@ -13,9 +13,13 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-
+    increment(state) {
+      state.count++
+    }
   },
   actions: {
-
+    increment({commit, state}) {
+      commit('increment')
+    }
   }
 })
